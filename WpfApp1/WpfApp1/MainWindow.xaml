@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="859"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
      TextElement.FontWeight="Regular"
@@ -14,7 +14,7 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}">
-    <Grid Width="800" Margin="0">
+    <Grid Margin="0,0,10,-6">
         <TextBox x:Name="FirstName" HorizontalAlignment="Left" Margin="43,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBox x:Name="LastName" HorizontalAlignment="Left" Margin="43,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <Label Content="Ім'я" HorizontalAlignment="Left" Margin="43,105,0,0" VerticalAlignment="Top"/>
@@ -23,13 +23,14 @@
         <Label Content="По-батькові" HorizontalAlignment="Left" Margin="43,152,0,0" VerticalAlignment="Top" Height="24"/>
         <TextBox x:Name="Sex" HorizontalAlignment="Left" Margin="42,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <Label Content="Стать" HorizontalAlignment="Left" Margin="42,202,0,0" VerticalAlignment="Top" Height="21"/>
-        <ListView x:Name="StudentsList" Margin="235,27,67,95">
+        <ListView x:Name="StudentsList" Margin="198,11,31,146">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Прізвище" DisplayMemberBinding="{Binding LastName}"/>
                     <GridViewColumn Header="Ім'я" DisplayMemberBinding="{Binding FirstName}"/>
                     <GridViewColumn Header="По-батькові" DisplayMemberBinding="{Binding MiddleName}"/>
                     <GridViewColumn Header="Стать" DisplayMemberBinding="{Binding Sex}"/>
+                 
                 </GridView>
             </ListView.View>
         </ListView>
@@ -37,5 +38,6 @@
         <Button x:Name="ClearButton" Content="Очистити" HorizontalAlignment="Left" Margin="583,308,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="ClearButton_Click"/>
         <Button x:Name="EditButton" Content="Редагувати" HorizontalAlignment="Left" Margin="235,308,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="EditButton_Click"/>
         <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="409,308,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="DeleteButton_Click"/>
+        <Button x:Name="LINQ_Button" Content="LINQ" HorizontalAlignment="Center" Margin="0,372,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="LINQ_Button_Click"/>
     </Grid>
 </Window>

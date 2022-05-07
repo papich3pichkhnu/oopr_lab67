@@ -19,47 +19,34 @@
             <TabControl
     materialDesign:ColorZoneAssist.Mode="PrimaryLight">
                 <TabItem
-      Header="TAB 1">
-                    <TextBlock
-        Margin="8"
-        Text="PrimaryLight Tab 1" />
+      Header="LINQ">
+                    <Grid>
+                        <WrapPanel Margin="0,10,0,272">
+                            <Button Content="Execute Where" Click="WhereButton_Click" x:Name="WhereButton" Margin="5"/>
+                            <Button Content="Execute Group" x:Name="GroupButton" Click="GroupButton_Click" Margin="5"/>
+                            <Button Content="Execute Join" x:Name="JoinButton" Margin="5" Click="JoinButton_Click"/>
+                            <Button Content="Execute Extension" x:Name="ExtensionButton" Margin="5" Click="ExtensionButton_Click"/>
+                            <Button Content="Execute Extension + Count" x:Name="ExtensionCountButton" Margin="5" Click="ExtensionCountButton_Click"/>
+                            <Button Content="Execute Sort" x:Name="SortButton" Margin="5" Click="SortButton_Click"/>
+                            <Button Content="Execute Union" x:Name="UnionButton" Margin="5" Click="UnionButton_Click"/>
+                            <Button Content="Execute Intersect" x:Name="IntersectButton" Margin="5" Click="IntersectButton_Click"/>
+                            <Button Content="Execute Except" x:Name="ExceptButton" Margin="5" Click="ExceptButton_Click"/>
+                        </WrapPanel>
+                        <ListView x:Name="StudentsQueryList" Margin="70,132,43,32">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Прізвище" DisplayMemberBinding="{Binding LastName}"/>
+                                    <GridViewColumn Header="Ім'я" DisplayMemberBinding="{Binding FirstName}"/>
+                                    <GridViewColumn Header="По-батькові" DisplayMemberBinding="{Binding MiddleName}"/>
+                                    <GridViewColumn Header="Стать" DisplayMemberBinding="{Binding Sex}"/>
+                                    <GridViewColumn Header="Факультет" DisplayMemberBinding="{Binding FacultyName}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
                 </TabItem>
-                <TabItem
-      Header="TAB 2">
-                    <TextBlock
-        Margin="0,8,0,8"
-        Text="PrimaryLight Tab 2" Width="516" />
-                </TabItem>
-                <TabItem
-      Header="TAB 2">
-                    <TextBlock
-        Margin="0,8,0,8"
-        Text="PrimaryLight Tab 2" Width="516" />
-                </TabItem>
-                <TabItem
-      Header="TAB 2">
-                    <TextBlock
-        Margin="0,8,0,8"
-        Text="PrimaryLight Tab 2" Width="516" />
-                </TabItem>
-                <TabItem
-      Header="TAB 2">
-                    <TextBlock
-        Margin="0,8,0,8"
-        Text="PrimaryLight Tab 2" Width="516" />
-                </TabItem>
-                <TabItem
-      Header="TAB 2">
-                    <TextBlock
-        Margin="0,8,0,8"
-        Text="PrimaryLight Tab 2" Width="516" />
-                </TabItem>
-                <TabItem
-      Header="TAB 2">
-                    <TextBlock
-        Margin="0,8,0,8"
-        Text="PrimaryLight Tab 2" Width="516" />
-                </TabItem>
+                
+
             </TabControl>
         </materialDesign:Card>
     </Grid>
