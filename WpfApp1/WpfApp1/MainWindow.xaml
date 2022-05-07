@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid Width="800" Margin="0">
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Margin="43,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="LastName" HorizontalAlignment="Left" Margin="43,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Ім'я" HorizontalAlignment="Left" Margin="43,105,0,0" VerticalAlignment="Top"/>
+        <Label Content="Прізвище" HorizontalAlignment="Left" Margin="43,59,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="MiddleName" HorizontalAlignment="Left" Margin="42,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="По-батькові" HorizontalAlignment="Left" Margin="43,152,0,0" VerticalAlignment="Top" Height="24"/>
+        <TextBox x:Name="Sex" HorizontalAlignment="Left" Margin="42,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Стать" HorizontalAlignment="Left" Margin="42,202,0,0" VerticalAlignment="Top" Height="21"/>
+        <ListView x:Name="StudentsList" Margin="235,27,67,95">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Прізвище" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="Ім'я" DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn Header="По-батькові" DisplayMemberBinding="{Binding MiddleName}"/>
+                    <GridViewColumn Header="Стать" DisplayMemberBinding="{Binding Sex}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="SendButton" Content="Додати" HorizontalAlignment="Left" Margin="43,308,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="SendButton_Click"/>
+        <Button x:Name="ClearButton" Content="Очистити" HorizontalAlignment="Left" Margin="583,308,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="ClearButton_Click"/>
+        <Button x:Name="EditButton" Content="Редагувати" HorizontalAlignment="Left" Margin="235,308,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="EditButton_Click"/>
+        <Button x:Name="DeleteButton" Content="Видалити" HorizontalAlignment="Left" Margin="409,308,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="DeleteButton_Click"/>
+    </Grid>
+</Window>
