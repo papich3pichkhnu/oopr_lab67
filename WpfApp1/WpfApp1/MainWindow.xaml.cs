@@ -142,5 +142,11 @@ namespace WpfApp1
 
             ReloadList();
         }
+
+        private void LINQ_Button_Click(object sender, RoutedEventArgs e)
+        {
+            LinqLab linqLab = new LinqLab();
+            linqLab.Show();
+        }
     }
 }
